@@ -1,0 +1,37 @@
+{
+  "name": "lucky",
+  "author": "Ariel Flesler <aflesler@gmail.com>",
+  "version": "1.0.0",
+  "description": "CLI tool to measure the state of your luck, at the moment",
+  "keywords": [
+    "luck",
+    "mojo",
+    "fortune",
+    "oracle",
+    "cli",
+    "superstitious",
+    "esoteric",
+    "magic",
+    "funny",
+    "joke",
+    "just-for-fun",
+    "or-is-it"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/flesler/lucky",
+  "bugs": "https://github.com/flesler/lucky/issues",
+  "repository": "git://github.com/flesler/lucky",
+  "main": "./bin/lucky.js",
+  "preferGlobal": true,
+  "bin": {
+    "lucky": "./bin/lucky.js"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "colors-mini": "^1.0.2",
+    "commander": "^2.9.0"
+  },
+  "devDependencies": {}
+}
