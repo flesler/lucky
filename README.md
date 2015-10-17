@@ -10,8 +10,10 @@ Before any important move in your life, you should first consult this tool to se
 
 ## Installation
 
+[![NPM](https://nodei.co/npm/lucky.png?compact=true)](https://npmjs.org/package/lucky)
+
 ``` bash
-$ npm install -g lucky
+$ npm install lucky -g
 ```
 
 ## Options
