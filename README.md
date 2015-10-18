@@ -34,12 +34,12 @@ $ lucky --help
     -C, --no-colors        Do not use fancy colors in output
     -v, --verbose [level]  Verbosity level (0-4) [default 1]
     -s, --silent           Alias for --verbose=0
-    -8, --eightball        Transform into a Magic 8-ball
+    -n, --number           Output only the luck number
+    -8, --eightball        Transform into a magic 8-ball
 
   Exit code:
 
     Exits successfully only if luck is above average
-
 ```
 
 ## Examples
@@ -105,6 +105,11 @@ $ lucky -8
 Definitely!
 $ lucky -8
 Nope
+```
+
+Log you luck, add it to a cron and then you can make charts and whatnot
+```bash
+$ echo `date "+%Y-%m-%d %H:%M:%S"` `lucky -n`% >> ~/luck.log
 ```
 
 ## How does it measure my luck?

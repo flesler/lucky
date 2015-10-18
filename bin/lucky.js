@@ -11,12 +11,16 @@ const
 opts
 	.version(pkg.version)
 	.description(pkg.description)
+	//- Simulation
 	.option('-o, --opponents <n>', 'Number of opponents competing [default 1]', Number, 1)
 	.option('-r, --rounds <n>', 'Number of rounds simulated [default 100]', Number, 100)
+	//- Output
 	.option('-C, --no-colors', 'Do not use fancy colors in output')
 	.option('-v, --verbose [level]', 'Verbosity level (0-4) [default 1]', Number, 1)
 	.option('-s, --silent', 'Alias for --verbose=0')
+	.option('-n, --number', 'Output only the luck number')
 	.option('-8, --eightball', 'Transform into a magic 8-ball')
+
 	.on('--help', function(){
 	  console.log('  Exit code:');
 	  console.log('');
@@ -28,7 +32,7 @@ opts
 if (opts.verbose === true) {
 	opts.verbose = 4;
 }
-if (opts.eightball || opts.silent) {
+if (opts.number || opts.eightball || opts.silent) {
 	opts.verbose = 0;
 }
 
@@ -105,6 +109,9 @@ if (opts.eightball) {
 		['Yes', 'Definitely!', 'Probably', 'Very likely'] :
 		['No!', 'Nope', 'Hmmm', 'Nahhh', 'No way!'];
 	console.log(replies[Math.floor(replies.length * Math.random())]);
+}
+if (opts.number) {
+	console.log(luck);
 }
 
 // Allow other commands to be executed only if luck is above average
