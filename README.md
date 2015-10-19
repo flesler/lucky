@@ -1,5 +1,7 @@
 # lucky
 
+[![](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/4787314/fleslerlucky-on-GitHub)
+
 ## Description
 
 CLI tool to measure the state of your luck at the moment.
